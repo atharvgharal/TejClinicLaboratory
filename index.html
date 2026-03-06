@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Tej Clinic Laboratory</title>
+
+<style>
+
+body{
+font-family: Arial;
+margin:0;
+background:#f4f6f9;
+}
+
+header{
+background:#0066cc;
+color:white;
+padding:20px;
+text-align:center;
+font-size:28px;
+}
+
+.container{
+padding:20px;
+text-align:center;
+}
+
+input,select{
+padding:10px;
+margin:10px;
+width:250px;
+border-radius:5px;
+border:1px solid gray;
+}
+
+button{
+background:#25D366;
+color:white;
+border:none;
+padding:12px 25px;
+border-radius:5px;
+cursor:pointer;
+font-size:16px;
+}
+
+button:hover{
+background:#1ebe5d;
+}
+
+.test{
+background:white;
+padding:15px;
+margin:10px;
+border-radius:8px;
+box-shadow:0 0 8px gray;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+Tej Clinic Laboratory
+</header>
+
+<div class="container">
+
+<h2>Book Blood Test</h2>
+
+<input type="text" id="name" placeholder="Patient Name"><br>
+
+<input type="text" id="mobile" placeholder="Mobile Number"><br>
+
+<input type="text" id="address" placeholder="Address for Home Collection"><br>
+
+<select id="test">
+
+<option>Select Test</option>
+<option>CBC Test - ₹300</option>
+<option>Blood Sugar - ₹200</option>
+<option>Thyroid Profile - ₹500</option>
+<option>Lipid Profile - ₹700</option>
+<option>Hemoglobin - ₹150</option>
+<option>Vitamin D - ₹1200</option>
+<option>Vitamin B12 - ₹900</option>
+<option>Liver Function Test - ₹600</option>
+<option>Kidney Function Test - ₹650</option>
+<option>Malaria Test - ₹400</option>
+<option>Dengue Test - ₹800</option>
+<option>Urine Test - ₹150</option>
+<option>Calcium Test - ₹350</option>
+<option>Uric Acid - ₹300</option>
+<option>CRP Test - ₹500</option>
+
+</select>
+
+<br><br>
+
+<button onclick="sendWhatsApp()">Book on WhatsApp</button>
+
+</div>
+
+<div class="container">
+
+<h2>Download Report</h2>
+
+<input type="text" placeholder="Enter Mobile Number">
+
+<button>Download Report</button>
+
+</div>
+
+<script>
+
+function sendWhatsApp(){
+
+var name=document.getElementById("name").value;
+var mobile=document.getElementById("mobile").value;
+var address=document.getElementById("address").value;
+var test=document.getElementById("test").value;
+
+var phone="9503768636";
+
+var message="Hello Tej Clinic Laboratory,%0A%0APatient Name: "+name+"%0AMobile: "+mobile+"%0ATest: "+test+"%0AAddress: "+address+"%0A(Home Sample Collection)";
+
+var url="https://wa.me/"+phone+"?text="+message;
+
+window.open(url);
+
+}
+
+</script>
+
+</body>
+</html>
